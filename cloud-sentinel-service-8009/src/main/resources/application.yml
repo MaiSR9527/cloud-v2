@@ -1,0 +1,35 @@
+server:
+  port: 8009
+spring:
+  application:
+    name: cloud-nacos-sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+          #配置Sentin dashboard地址
+        dashboard: localhost:8080
+          # 默认8719端口，假如被占用了会自动从8719端口+1进行扫描，直到找到未被占用的 端口
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            dataId: cloud-nacos-sentinel-service
+            groupId: DEV_GROUP
+            data_type: json
+            rule_type: flow
+
+
+#  namespace -> group -> profile
+# {spring.application.name}-{spring.profile.active}.{file-extension}
+# cloud-config-center-nacos-client-service-dev.yaml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+

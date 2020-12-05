@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.msr.cloudv2.payment.dao.PaymentMapper">
+    <resultMap id="BaseResultMap" type="com.msr.cloudv2.entity.Payment">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <id column="name" jdbcType="VARCHAR" property="name"/>
+        <id column="price" jdbcType="DECIMAL" property="price"/>
+        <id column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <id column="serial" jdbcType="VARCHAR" property="serial"/>
+    </resultMap>
+    <insert id="insertOne" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">
+        insert into payment(`name`,price,create_time,`serial`)
+        values(#{name},#{price},#{createTime},#{serial});
+    </insert>
+    <select id="selectById" resultMap="BaseResultMap">
+        select * from payment where id=#{id};
+    </select>
+    <select id="getList" resultMap="BaseResultMap" resultType="list">
+        select *
+        from payment;
+    </select>
+
+
+</mapper>

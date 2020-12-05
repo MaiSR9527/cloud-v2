@@ -1,0 +1,14 @@
+server:
+  port: 7005
+spring:
+  application:
+    name: cloud-nacos-provider-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,22 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: cloud-registry-eureka-7001
+eureka:
+  instance:
+    hostname: eureka7001.com
+#    ip-address: eureka所在的IP地址
+#    prefer-ip-address: true
+  client:
+
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+#      defaultZone: http://eureka7002.com:7002/eureka/
+  server:
+    eviction-interval-timer-in-ms: 2000
+#    自我保护机制，默认true
+#    enable-self-preservation: true
+
