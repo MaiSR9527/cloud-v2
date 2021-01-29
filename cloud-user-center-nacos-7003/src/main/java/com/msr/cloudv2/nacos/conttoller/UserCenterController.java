@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("nacos")
-public class NacosController {
+public class UserCenterController {
 
 
     @GetMapping("test")
