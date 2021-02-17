@@ -1,4 +1,4 @@
-package com.msr.cloudv2.order.lb;
+package com.msr.cloudv2.order.lbRule;
 
 import org.springframework.cloud.client.ServiceInstance;
 

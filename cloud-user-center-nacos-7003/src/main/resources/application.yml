@@ -1,8 +1,13 @@
 server:
   port: 7003
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&characterEncoding=utf8
   application:
-    name: cloud-nacos-provider-service
+    name: cloud-user-center-provider-service
   cloud:
     nacos:
       discovery:

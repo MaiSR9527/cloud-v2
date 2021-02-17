@@ -3,13 +3,15 @@ server:
 spring:
   application:
     name: cloud-consumer-order-service
-      #consul注册中心地址
+    #consul注册中心地址
   cloud:
     consul:
       host: localhost
       port: 8500
       discovery:
         service-name: ${spring.application.name}
+# 配置方式自定义，负载均衡。缺点：父子上下文问题
+# client:ribbon:NFLoadBalancerRuleClassName: 类路径
 #eureka:
 #  instance:
 #    instance-id: order-service-80
@@ -17,4 +19,9 @@ spring:
 #    service-url:
 #      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/
 #    fetch-registry: true
+# 指定某个服务开启饥饿加载
+ribbon:
+  eager-load:
+    clients: user-center
+    enabled: true
 #    register-with-eureka: true

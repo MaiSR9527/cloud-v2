@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>cloud-provider-payment-8001</module>
-        <module>cloud-consumer-order-80</module>
+        <module>cloud-consumer-order-ribbon-80</module>
         <module>cloud-api-common</module>
         <module>cloud-registry-eureka-7001</module>
         <module>cloud-registry-eureka-7002</module>
@@ -27,9 +27,9 @@
         <module>cloud-stream-rabbitmq-consumer-9002</module>
         <module>cloud-stream-rabbitmq-consumer-9003</module>
         <module>cloud-consumer-order-openfeign-zipkin-80</module>
-        <module>cloud-registry-nacos-7003</module>
+        <module>cloud-user-center-nacos-7003</module>
         <module>cloud-consumer-openfeign-nacos-80</module>
-        <module>cloud-registry-nacos-7005</module>
+        <module>cloud-user-center-nacos-7005</module>
         <module>cloud-config-center-nacos-client-7788</module>
         <module>cloud-sentinel-service-8009</module>
         <module>oauthcode-server</module>

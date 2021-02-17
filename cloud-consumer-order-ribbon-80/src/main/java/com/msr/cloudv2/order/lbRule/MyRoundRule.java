@@ -1,4 +1,4 @@
-package com.msr.cloudv2.order.lb;
+package com.msr.cloudv2.order.lbRule;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

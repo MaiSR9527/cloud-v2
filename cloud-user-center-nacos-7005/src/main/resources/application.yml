@@ -2,7 +2,7 @@ server:
   port: 7005
 spring:
   application:
-    name: cloud-nacos-provider-service
+    name: cloud-user-center-provider-service
   cloud:
     nacos:
       discovery:

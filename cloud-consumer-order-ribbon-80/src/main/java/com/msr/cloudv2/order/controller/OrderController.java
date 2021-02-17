@@ -1,7 +1,7 @@
 package com.msr.cloudv2.order.controller;
 
 import com.msr.cloudv2.entity.Result;
-import com.msr.cloudv2.order.lb.MyLoadBalancer;
+import com.msr.cloudv2.order.lbRule.MyLoadBalancer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;

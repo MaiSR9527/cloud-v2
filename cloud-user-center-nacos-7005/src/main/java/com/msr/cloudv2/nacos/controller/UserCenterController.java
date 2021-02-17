@@ -1,4 +1,4 @@
-package com.msr.cloudv2.nacos.com.msr.cloudv2.nacos;
+package com.msr.cloudv2.nacos.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("nacos")
-public class NacosController {
+public class UserCenterController {
 
 
     @GetMapping("test")

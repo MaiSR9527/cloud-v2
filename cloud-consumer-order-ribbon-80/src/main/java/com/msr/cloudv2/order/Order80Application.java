@@ -15,6 +15,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 @EnableDiscoveryClient
 @SpringBootApplication
 @RibbonClient(name = "cloud-consul-payment-service", configuration = MyRuleConfig.class)
+//@RibbonClients(defaultConfiguration = MyRuleConfig.class)  全局配置
 public class Order80Application {
 
     public static void main(String[] args) {
