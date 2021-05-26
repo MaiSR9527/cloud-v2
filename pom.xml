@@ -30,9 +30,9 @@
         <module>cloud-user-center-nacos-7003</module>
         <module>cloud-consumer-openfeign-nacos-80</module>
         <module>cloud-user-center-nacos-7005</module>
-        <module>cloud-config-center-nacos-client-7788</module>
+        <module>cloud-config-center-nacos-7788</module>
         <module>cloud-sentinel-service-8009</module>
-        <module>oauthcode-server</module>
+        <module>user-center</module>
     </modules>
     <packaging>pom</packaging>
 
