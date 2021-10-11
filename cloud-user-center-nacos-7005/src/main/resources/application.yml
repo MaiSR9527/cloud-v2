@@ -7,6 +7,13 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+          # 开发NameSpace，值为UUID
+        namespace: fa47d71f-9bc5-45ae-96c1-a6b9f7c55700
+          # 北京集群
+        cluster-name: BJ
+        metadata:
+          version: v1
+          info: user-center
 management:
   endpoints:
     web:
