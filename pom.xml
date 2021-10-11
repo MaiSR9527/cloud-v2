@@ -35,6 +35,7 @@
         <module>user-center</module>
         <module>dn-nacos-provider</module>
         <module>dn-nacos-consumer</module>
+        <module>cloud-sentinel-gateway-88</module>
     </modules>
     <packaging>pom</packaging>
 

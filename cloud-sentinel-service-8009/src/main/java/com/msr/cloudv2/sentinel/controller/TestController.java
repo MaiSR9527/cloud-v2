@@ -27,7 +27,11 @@ public class TestController {
 
     @GetMapping("testB")
     public String testB(){
-
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "test ---> B";
     }
 }
