@@ -111,13 +111,13 @@ public class R<T> {
         return new R(-10, (Object)null, String.format(message, args));
     }
 
-    public static <E> R<E> fail(SysStatusCode exceptionCode) {
-        return validFail(exceptionCode);
-    }
+//    public static <E> R<E> fail(SysStatusCode exceptionCode) {
+//        return validFail(exceptionCode);
+//    }
 
-    public static <E> R<E> fail(BizException exception) {
-        return exception == null ? fail("系统繁忙，请稍候再试") : new R(exception.getCode(), (Object)null, exception.getMessage(), exception.getMessage());
-    }
+//    public static <E> R<E> fail(BizException exception) {
+//        return exception == null ? fail("系统繁忙，请稍候再试") : new R(exception.getCode(), (Object)null, exception.getMessage(), exception.getMessage());
+//    }
 
     public static <E> R<E> fail(Throwable throwable) {
         String msg = throwable != null ? throwable.getMessage() : "系统繁忙，请稍候再试";
@@ -133,9 +133,9 @@ public class R<T> {
         return new R(-9, (Object)null, String.format(message, args));
     }
 
-    public static <E> R<E> validFail(BaseExceptionCode exceptionCode) {
-        return new R(exceptionCode.getCode(), (Object)null, exceptionCode.getMsg() != null && !exceptionCode.getMsg().isEmpty() ? exceptionCode.getMsg() : "系统繁忙，请稍候再试");
-    }
+//    public static <E> R<E> validFail(BaseExceptionCode exceptionCode) {
+//        return new R(exceptionCode.getCode(), (Object)null, exceptionCode.getMsg() != null && !exceptionCode.getMsg().isEmpty() ? exceptionCode.getMsg() : "系统繁忙，请稍候再试");
+//    }
 
     public static <E> R<E> timeout() {
         return fail(-2, "请求超时，请稍候再试");
@@ -163,9 +163,9 @@ public class R<T> {
         return this.code == 0 || this.code == 200;
     }
 
-    public String toString() {
-        return JsonUtil.toJson(this);
-    }
+//    public String toString() {
+//        return JsonUtil.toJson(this);
+//    }
 
     public int getCode() {
         return this.code;
