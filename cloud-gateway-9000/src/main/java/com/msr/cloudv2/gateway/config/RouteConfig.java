@@ -18,7 +18,7 @@ public class RouteConfig {
     public RouteLocator customRoute(RouteLocatorBuilder builder){
         return builder.routes().
                 route("news",r->r.path("/news")
-                        .uri("http://www.baidu.com/"))
+                        .uri("https://www.baidu.com/"))
                 .build();
     }
 }
