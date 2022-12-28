@@ -31,7 +31,7 @@ public class GlobalFilter implements org.springframework.cloud.gateway.filter.Gl
             return exchange.getResponse().setComplete();
         }
         for (String s : list) {
-            System.out.println(s);
+            log.info(s);
         }
         return chain.filter(exchange);
     }

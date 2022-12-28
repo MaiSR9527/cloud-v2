@@ -1,7 +1,7 @@
 package com.msr.cloudv2.basic.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.msr.cloudv2.basic.exption.SysStatusCode;
+import com.msr.cloudv2.basic.exption.BaseExceptionCode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -83,7 +83,7 @@ public class R<T> {
     }
 
     public static <E> R<E> successDef() {
-        return new R(0, (Object)null, "ok", true);
+        return new R(0, (Object) null, "ok", true);
     }
 
     public static <E> R<E> successDef(E data, String msg) {
@@ -95,11 +95,11 @@ public class R<T> {
     }
 
     public static <E> R<E> fail(int code, String msg) {
-        return new R(code, (Object)null, msg != null && !msg.isEmpty() ? msg : "系统繁忙，请稍候再试");
+        return new R(code, (Object) null, msg != null && !msg.isEmpty() ? msg : "系统繁忙，请稍候再试");
     }
 
     public static <E> R<E> fail(int code, String msg, String errorMsg) {
-        return new R(code, (Object)null, msg != null && !msg.isEmpty() ? msg : "系统繁忙，请稍候再试", errorMsg);
+        return new R(code, (Object) null, msg != null && !msg.isEmpty() ? msg : "系统繁忙，请稍候再试", errorMsg);
     }
 
     public static <E> R<E> fail(String msg) {
@@ -108,7 +108,7 @@ public class R<T> {
 
     public static <E> R<E> fail(String msg, Object... args) {
         String message = msg != null && !msg.isEmpty() ? msg : "系统繁忙，请稍候再试";
-        return new R(-10, (Object)null, String.format(message, args));
+        return new R(-10, (Object) null, String.format(message, args));
     }
 
 //    public static <E> R<E> fail(SysStatusCode exceptionCode) {
@@ -125,17 +125,17 @@ public class R<T> {
     }
 
     public static <E> R<E> validFail(String msg) {
-        return new R(-9, (Object)null, msg != null && !msg.isEmpty() ? msg : "系统繁忙，请稍候再试");
+        return new R(-9, (Object) null, msg != null && !msg.isEmpty() ? msg : "系统繁忙，请稍候再试");
     }
 
     public static <E> R<E> validFail(String msg, Object... args) {
         String message = msg != null && !msg.isEmpty() ? msg : "系统繁忙，请稍候再试";
-        return new R(-9, (Object)null, String.format(message, args));
+        return new R(-9, (Object) null, String.format(message, args));
     }
 
-//    public static <E> R<E> validFail(BaseExceptionCode exceptionCode) {
-//        return new R(exceptionCode.getCode(), (Object)null, exceptionCode.getMsg() != null && !exceptionCode.getMsg().isEmpty() ? exceptionCode.getMsg() : "系统繁忙，请稍候再试");
-//    }
+   public static <E> R<E> validFail(BaseExceptionCode exceptionCode) {
+       return new R(exceptionCode.getCode(), (Object)null, exceptionCode.getMsg() != null && !exceptionCode.getMsg().isEmpty() ? exceptionCode.getMsg() : "系统繁忙，请稍候再试");
+   }
 
     public static <E> R<E> timeout() {
         return fail(-2, "请求超时，请稍候再试");

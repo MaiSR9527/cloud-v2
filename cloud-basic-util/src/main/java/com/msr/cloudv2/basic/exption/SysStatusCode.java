@@ -1,6 +1,6 @@
 package com.msr.cloudv2.basic.exption;
 
-public enum SysStatusCode {
+public enum SysStatusCode implements BaseExceptionCode {
     SUCCESS(0, "成功"),
     SYSTEM_BUSY(-1, "系统繁忙~请稍后再试~"),
     SYSTEM_TIMEOUT(-2, "系统维护中~请稍后再试~"),
