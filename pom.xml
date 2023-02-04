@@ -37,6 +37,7 @@
         <module>dn-nacos-consumer</module>
         <module>cloud-sentinel-gateway-88</module>
         <module>cloud-basic-util</module>
+        <module>schedule-powerjob</module>
     </modules>
     <packaging>pom</packaging>
 
