@@ -38,6 +38,9 @@
         <module>cloud-sentinel-gateway-88</module>
         <module>cloud-basic-util</module>
         <module>schedule-powerjob</module>
+        <module>cloud-registry-consul-consumer</module>
+        <module>cloud-registry-consul-provider</module>
+        <module>cloud-config-consul-client</module>
     </modules>
     <packaging>pom</packaging>
 

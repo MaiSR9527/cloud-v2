@@ -1,0 +1,14 @@
+server:
+  port: 8666
+spring:
+  application:
+    name: cloud-registry-consul-provider
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      config:
+        enabled: false
+      discovery:
+        heartbeat:
+          enabled: true
