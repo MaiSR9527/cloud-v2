@@ -41,6 +41,8 @@
         <module>cloud-registry-consul-consumer</module>
         <module>cloud-registry-consul-provider</module>
         <module>cloud-config-consul-client</module>
+        <module>cloud-config-center</module>
+        <module>cloud-config-center/cloud-config-server-mysql</module>
     </modules>
     <packaging>pom</packaging>
 
