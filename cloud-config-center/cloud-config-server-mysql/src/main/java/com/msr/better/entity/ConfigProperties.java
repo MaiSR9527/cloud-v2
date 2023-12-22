@@ -16,21 +16,21 @@ import javax.persistence.Table;
  **/
 @Data
 @Entity
-@Table(name = "PROPERTIES")
+@Table(name = "properties")
 public class ConfigProperties {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "KEY")
-    private String key;
-    @Column(name = "VALUE")
-    private String value;
-    @Column(name = "APPLICATION")
+    @Column(name = "config_key")
+    private String configKey;
+    @Column(name = "config_value")
+    private String configValue;
+    @Column(name = "application")
     private String application;
-    @Column(name = "PROFILE")
-    private String profile;
-    @Column(name = "LABEL")
+    @Column(name = "config_profile")
+    private String configProfile;
+    @Column(name = "label")
     private String label;
 }

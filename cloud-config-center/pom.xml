@@ -10,11 +10,24 @@
     </parent>
 
     <artifactId>cloud-config-center</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>cloud-config-server-mysql</module>
+        <module>cloud-config-client</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

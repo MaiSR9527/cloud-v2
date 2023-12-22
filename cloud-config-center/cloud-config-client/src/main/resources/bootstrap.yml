@@ -1,0 +1,21 @@
+eureka:
+  instance:
+    instance-id: cloud-config-client
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+
+spring:
+  application:
+    name: cloud-config-client
+  cloud:
+    config:
+      discovery:
+        service-id: config-server-mysql
+        enabled: true
+      profile: dev
+      label: main
+      name: config-client
+logging:
+  level:
+    root: debug
